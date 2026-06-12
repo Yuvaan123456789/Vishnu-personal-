@@ -2,9 +2,49 @@
 <html>
 <head>
     <title>Vishnu Personal Gallery</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align:center;
+            background:#f4f4f4;
+            margin:0;
+        }
+
+        .header{
+            background:#0078d7;
+            color:white;
+            padding:30px;
+        }
+
+        .gallery{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+            margin-top:30px;
+        }
+
+        .gallery img{
+            width:300px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome Vishnu</h1>
-    <p>My Personal Photo Gallery Website</p>
+
+<div class="header">
+    <h1>📸 Vishnu Family Gallery</h1>
+    <p>My Personal Photo & Video Collection</p>
+</div>
+
+<h2>Family Photos</h2>
+
+<div class="gallery">
+    <img src="https://picsum.photos/300/200?1">
+    <img src="https://picsum.photos/300/200?2">
+    <img src="https://picsum.photos/300/200?3">
+</div>
+
 </body>
 </html>
