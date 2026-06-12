@@ -1,72 +1,127 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyInsta - Vishnu Gallery</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyInsta - Vishnu Gallery</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
- <div class="navbar">
+<div class="navbar">
     <div class="logo">📸 MyInsta</div>
-    <input type="text" placeholder="Search..." class="search-box">
 
-    <button onclick="toggleDarkMode()" class="dark-btn">
-        🌙 Dark Mode
-    </button>
+```
+<input type="text" id="searchInput" class="search-box"
+       placeholder="Search photos..." onkeyup="searchPosts()">
+
+<button onclick="toggleDarkMode()" class="dark-btn">
+    🌙
+</button>
+```
+
 </div>
 
-    <div class="header">
-        <h1>📸 Vishnu Family Gallery</h1>
-        <p>My Personal Photo Collection</p>
-    </div>
+<div class="header">
+    <h1>📸 Vishnu Family Gallery</h1>
+    <p>Upload Photos • Videos • Like • Comment • Download</p>
+</div>
 
-    <div class="gallery">
+<div class="upload-section">
 
-        <div class="post">
-            <div class="post-header">👤 Vishnu Family</div>
-            <img src="./Screenshot 2026-05-05 080214.png" onclick="openImage(this)">
-            <div class="actions">
-                <button onclick="like(this)">❤️ Like</button>
-                <span class="likes">0 likes</span>
-            </div>
-        </div>
+```
+<input type="file" id="imageUpload"
+       accept="image/*"
+       onchange="uploadImage(event)">
 
-        <div class="post">
-            <div class="post-header">👤 Vishnu Family</div>
-            <img src="./Screenshot 2026-05-05 081240.png" onclick="openImage(this)">
-            <div class="actions">
-                <button onclick="like(this)">❤️ Like</button>
-                <span class="likes">0 likes</span>
-            </div>
-        </div>
+<input type="file" id="videoUpload"
+       accept="video/*"
+       onchange="uploadVideo(event)">
+```
 
-        <div class="post">
-            <div class="post-header">👤 Vishnu Family</div>
-            <img src="./Screenshot 2026-05-05 081923.png" onclick="openImage(this)">
-            <div class="actions">
-                <button onclick="like(this)">❤️ Like</button>
-                <span class="likes">0 likes</span>
-            </div>
-        </div>
+</div>
 
-        <div class="post">
-            <div class="post-header">👤 Vishnu Family</div>
-            <img src="./Screenshot 2026-05-05 082106.png" onclick="openImage(this)">
-            <div class="actions">
-                <button onclick="like(this)">❤️ Like</button>
-                <span class="likes">0 likes</span>
-            </div>
-        </div>
+<div class="gallery" id="gallery">
+
+```
+<div class="post">
+    <div class="post-header">👤 Vishnu Family</div>
+
+    <img src="./Screenshot 2026-05-05 080214.png"
+         onclick="openImage(this)">
+
+    <div class="actions">
+
+        <button onclick="like(this)" class="like-btn">
+            ❤️ Like
+        </button>
+
+        <span class="likes">0 likes</span>
+
+        <a href="./Screenshot 2026-05-05 080214.png"
+           download>
+           📥 Download
+        </a>
 
     </div>
 
-    <div id="modal" onclick="closeImage()">
-        <img id="modalImg">
+    <div class="comments">
+        <input type="text" placeholder="Write comment..."
+               class="comment-input">
+
+        <button onclick="addComment(this)">
+            Post
+        </button>
+
+        <ul class="comment-list"></ul>
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<div class="post">
+    <div class="post-header">👤 Vishnu Family</div>
+
+    <img src="./Screenshot 2026-05-05 081240.png"
+         onclick="openImage(this)">
+
+    <div class="actions">
+
+        <button onclick="like(this)" class="like-btn">
+            ❤️ Like
+        </button>
+
+        <span class="likes">0 likes</span>
+
+        <a href="./Screenshot 2026-05-05 081240.png"
+           download>
+           📥 Download
+        </a>
+
+    </div>
+
+    <div class="comments">
+        <input type="text" placeholder="Write comment..."
+               class="comment-input">
+
+        <button onclick="addComment(this)">
+            Post
+        </button>
+
+        <ul class="comment-list"></ul>
+    </div>
+
+</div>
+```
+
+</div>
+
+<div id="modal" onclick="closeImage()">
+    <img id="modalImg">
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
