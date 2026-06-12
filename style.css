@@ -1,1 +1,22 @@
 
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #fafafa;
+  text-align: center;
+}
+
+.feed {
+  max-width: 500px;
+  margin: auto;
+}
+
+.post {
+  background: white;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+}
+
+.post img {
+  width: 100%;
+}
