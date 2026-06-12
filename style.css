@@ -98,3 +98,27 @@ body{
     max-width:90%;
     max-height:90%;
 }
+.dark-btn{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .navbar{
+    background:#1f1f1f;
+}
+
+.dark-mode .post{
+    background:#222;
+    color:white;
+}
+
+.dark-mode .header{
+    background:#0d47a1;
+}
