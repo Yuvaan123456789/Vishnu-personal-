@@ -1,8 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-console.log("Insta clone running...");
-function like(btn) {
-    let likeText = btn.parentElement.querySelector(".likes");
-    let count = parseInt(likeText.innerText);
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
 
-    likeText.innerText = (count + 1) + " likes";
+.navbar{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.search-box{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.header{
+    background:#0078d7;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.gallery{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+    padding:30px;
+}
+
+.post{
+    background:white;
+    width:90%;
+    max-width:500px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.post-header{
+    padding:15px;
+    font-weight:bold;
+}
+
+.post img{
+    width:100%;
+    cursor:pointer;
+}
+
+.actions{
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+}
+
+.actions button{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.likes{
+    font-weight:bold;
+}
+
+#modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+}
+
+#modal img{
+    max-width:90%;
+    max-height:90%;
 }
