@@ -12,3 +12,6 @@ function openImage(img){
 function closeImage(){
     document.getElementById("modal").style.display = "none";
 }
+function toggleDarkMode(){
+    document.body.classList.toggle("dark-mode");
+}
